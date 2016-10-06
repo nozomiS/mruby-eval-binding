@@ -99,3 +99,28 @@ assert('Object#instance_eval with begin-rescue-ensure execution order') do
   hell_raiser = HellRaiser.new
   assert_equal([:enter_raise_hell, :begin, :rescue, :ensure], hell_raiser.raise_hell)
 end
+
+assert("Kernel.#binding") do
+  assert_false(nil?) {
+    self.binding
+  }
+
+  assert_equal([:c, :b]) {
+    b = binding
+    b.local_variable_set :c, 10
+    b.local_variables
+  }
+
+  assert_equal(10) {
+    b = binding
+    b.local_variable_set :c, 10
+    b.local_variable_get :c
+  }
+
+  assert_equal(true) {
+    b = binding
+    b.local_variable_set :c, 10
+    b.local_variable_defined? :c
+  }
+
+end
