@@ -1,7 +1,7 @@
-MRuby::Gem::Specification.new('mruby-eval') do |spec|
+MRuby::Gem::Specification.new('mruby-eval-binding') do |spec|
   spec.license = 'MIT'
-  spec.author  = 'mruby developers'
-  spec.summary = 'standard Kernel#eval method'
+  spec.authors = 'mruby developers', 'Nozomi SATO'
+  spec.summary = 'standard Kernel#eval method and class Binding'
 
   add_dependency 'mruby-compiler', :core => 'mruby-compiler'
 end
