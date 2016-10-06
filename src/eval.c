@@ -623,7 +623,7 @@ f_instance_eval(mrb_state *mrb, mrb_value self)
 }
 
 void
-mrb_mruby_eval_gem_init(mrb_state* mrb)
+mrb_mruby_eval_binding_gem_init(mrb_state* mrb)
 {
   mrb_define_module_function(mrb, mrb->kernel_module, "eval", f_eval, MRB_ARGS_ARG(1, 3));
   mrb_define_method(mrb, mrb->kernel_module, "instance_eval", f_instance_eval, MRB_ARGS_ARG(1, 2));
@@ -632,6 +632,6 @@ mrb_mruby_eval_gem_init(mrb_state* mrb)
 }
 
 void
-mrb_mruby_eval_gem_final(mrb_state* mrb)
+mrb_mruby_eval_binding_gem_final(mrb_state* mrb)
 {
 }
