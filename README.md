@@ -8,7 +8,7 @@ Also it may provide some perfomance improvements.
 ## Methods
 
 See mruby-eval and,
-...
+```
 Kernel#binding
 
 Binding#eval
@@ -17,7 +17,7 @@ Binding#local_variable_get
 Binding#local_variable_set
 Binding#local_variables
 Binding#receiver
-...
+```
 
 ## Limitation
 
